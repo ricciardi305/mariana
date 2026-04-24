@@ -267,6 +267,8 @@
 
   function onNo() {
     noCount++;
+    btnNo.style.width = 'calc(' + (50 - noCount * 8) + '% - 0.5rem)';
+    btnYes.style.width = 'calc(' + (50 + noCount * 8) + '% - 0.5rem)';
     btnNo.style.padding = '0.9rem ' + Math.max(0.5, 2 - noCount * 0.35) + 'rem';
     btnNo.style.fontSize = Math.max(0.55, 1.1 - noCount * 0.12) + 'rem';
     btnNo.style.opacity = Math.max(0.15, 1 - noCount * 0.18);
