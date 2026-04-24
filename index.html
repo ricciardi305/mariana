@@ -120,17 +120,16 @@
     line-height: 1.4;
     text-shadow: 0 0 20px #c0003c44;
   }
-
+  
   .buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    position: relative;
+    align-items: center;
   }
 
   .btn-yes {
-    flex: 1;
-    padding: 0.9rem 1rem;
+    padding: 0.9rem 2rem;
     background: #c0003c;
     border: none;
     border-radius: 3px;
@@ -143,29 +142,25 @@
     box-shadow: 0 0 20px #c0003c55;
   }
 
-  .btn-yes:hover, .btn-yes:active {
-    background: #e0004a;
-    box-shadow: 0 0 35px #c0003c88;
-    transform: scale(1.04);
-  }
-
   .btn-no {
-    flex: 1;
-    padding: 0.9rem 1rem;
+    padding: 0.9rem 2rem;
     background: transparent;
     border: 1px solid #4a2030;
     border-radius: 3px;
-    color: #fff;
+    color: #7a4055;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     letter-spacing: 0.06em;
     cursor: pointer;
     transition: all 0.2s;
-    position: absolute;
-    right: 0;
-    width: calc(50% - 0.5rem);
   }
 
+  .btn-yes:hover, .btn-yes:active {
+    background: #e0004a;
+    box-shadow: 0 0 35px #c0003c88;
+    transform: scale(1.04);
+  }
+  
   .success-screen {
     display: none;
     animation: fadeIn 0.8s ease forwards;
