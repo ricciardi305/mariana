@@ -147,7 +147,7 @@
     background: transparent;
     border: 1px solid #4a2030;
     border-radius: 3px;
-    color: #7a4055;
+    color: #fff;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     letter-spacing: 0.06em;
@@ -261,12 +261,14 @@
   }
 
   const btnNo = document.getElementById('btn-no');
+  const btnYes = document.getElementById('btn-yes');
   let noCount = 0;
   const noMessages = ['Não', 'Tem certeza?', 'Pensa melhor...', 'Última chance!', 'Vai se arrepender!'];
 
   function onNo() {
     noCount++;
     btnNo.style.width = 'calc(' + (50 - noCount * 8) + '% - 0.5rem)';
+    btnYes.styles.width = 'calc(' + (50 + noCount * 8) + '% - 0.5rem)';
     btnNo.style.fontSize = Math.max(0.55, 1.1 - noCount * 0.12) + 'rem';
     btnNo.style.opacity = Math.max(0.15, 1 - noCount * 0.18);
     btnNo.textContent = noMessages[Math.min(noCount - 1, noMessages.length - 1)];
