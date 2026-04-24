@@ -267,15 +267,13 @@
 
   function onNo() {
     noCount++;
-    btnNo.style.width = 'calc(' + (50 - noCount * 8) + '% - 0.5rem)';
-    btnYes.styles.width = 'calc(' + (50 + noCount * 8) + '% - 0.5rem)';
+    btnNo.style.padding = '0.9rem ' + Math.max(0.5, 2 - noCount * 0.35) + 'rem';
     btnNo.style.fontSize = Math.max(0.55, 1.1 - noCount * 0.12) + 'rem';
     btnNo.style.opacity = Math.max(0.15, 1 - noCount * 0.18);
     btnNo.textContent = noMessages[Math.min(noCount - 1, noMessages.length - 1)];
     if (noCount >= 5) {
-      btnNo.style.display = 'none'
-      btnYes.styles.width = '100%'
-    };
+      btnNo.style.display = 'none';
+    }
   }
 
   function onYes() {
